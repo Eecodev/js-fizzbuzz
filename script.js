@@ -8,11 +8,14 @@ const wrapperEl = document.getElementById('boxWrapper');
 for(let i = 1; i <= 100; i++){
     console.log(i);
     let bgBox;
-    if(i % 2 === 0){
-        bgBox = 'even';
-    } else{
-        bgBox = 'odd';
-    }
+    if(i % 3 === 0){
+        bgBox = 'fizz';
+    } else if (i % 5 === 0){
+        bgBox = 'buzz';
+    } else
+        console.log(i);
+
+
     const boxEl = document.createElement('div');
     boxEl.className = 'box ${bgBox}d-flex justify-content-center align-itames-center';
     boxEl.innerHTML = i;
